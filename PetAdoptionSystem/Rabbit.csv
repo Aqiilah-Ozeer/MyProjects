@@ -1,0 +1,13 @@
+Animal_Id,Name,Breed,Age,Gender,Color,Vaccinated,Microchipped,Neutered,Adoption_Fee(Rs)
+R001,Thumper,Holland Lop,1,Male,Brown,Yes,No,Yes,1500
+R002,Snowball,Netherland Dwarf,2,Female,White,Yes,Yes,No,1600
+R003,Fluffy,Lionhead,3,Male,Grey,Yes,No,Yes,1700
+R004,Cinnamon,Mini Rex,2,Female,Cinnamon,Yes,No,Yes,1400
+R005,Pepper,Flemish Giant,4,Male,Black,Yes,Yes,No,1800
+R006,Oreo,Dutch,1,Female,Black and White,No,No,Yes,1300
+R007,Daisy,English Angora,2,Female,Fawn,Yes,Yes,No,1600
+R008,Thistle,English Spot,3,Male,White and Black,Yes,No,Yes,1700
+R009,Cotton,Polish,4,Female,White,Yes,Yes,Yes,1500
+R010,Marshmallow,Harlequin,3,Male,Tri-color,Yes,No,Yes,1750
+R011,Bunny,American,2,Female,Blue,No,Yes,No,1400
+R012,Patches,Havana,1,Male,Chocolate,Yes,No,Yes,1500

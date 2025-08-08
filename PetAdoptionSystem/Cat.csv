@@ -1,0 +1,14 @@
+Animal_Id,Name,Breed,Age,Gender,Color,Vaccinated,Microchipped,Adoption_Fee(Rs)
+C001,Whiskers,Siamese,4,Female,Cream and Brown,Yes,Yes,3000
+C002,Luna,Persian,3,Female,Grey,Yes,No,3500
+C003,Simba,Maine Coon,3,Male,Brown,Yes,Yes,3200
+C004,Milo,Bengal,5,Male,Orange,Yes,No,4000
+C005,Oliver,Ragdoll,1,Male,White and Grey,No,Yes,4500
+C006,Coco,Scottish Fold,2,Female,Blue,Yes,No,3300
+C007,Chloe,British Shorthair,3,Female,Blue,Yes,Yes,3100
+C008,Leo,Russian Blue,4,Male,Grey,Yes,No,3700
+C009,Nala,Abyssinian,2,Female,Ruddy,Yes,Yes,3800
+C010,Jasper,Sphynx,1,Male,Pink,No,No,4500
+C011,Lily,American Shorthair,5,Female,Silver Tabby,Yes,Yes,2900
+C012,Mittens,Burmese,4,Female,Brown,Yes,No,3200
+C013,Tom,Turkish Van,3,Male,White and Red,Yes,Yes,3500

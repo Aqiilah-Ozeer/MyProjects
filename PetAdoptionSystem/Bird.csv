@@ -1,0 +1,14 @@
+Animal_Id,Name,Species,Age,Gender,Color,Vaccinated,Microchipped,Tame,Adoption_Fee(Rs)
+B001,Tweety,Parakeet,2,Female,Yellow,Yes,No,Yes,600
+B002,Sky,Cockatiel,1,Male,Grey and Yellow,Yes,Yes,Yes,1200
+B003,Rio,Parrot,4,Male,Green,Yes,No,Yes,3500
+B004,Kiwi,Lovebird,3,Female,Green and Orange,Yes,No,Yes,800
+B005,Sunny,Canary,2,Male,Yellow,No,No,No,500
+B006,Coco,Cockatoo,5,Female,White,Yes,Yes,Yes,4500
+B007,Blue,Macaw,6,Male,Blue and Gold,Yes,No,Yes,5000
+B008,Ruby,Rosella,3,Female,Red and Blue,Yes,No,Yes,3000
+B009,Pip,Finch,2,Male,Zebra,No,No,No,400
+B010,Echo,African Grey,4,Female,Grey,Yes,Yes,Yes,4000
+B011,Mango,Conure,1,Male,Orange and Green,Yes,No,Yes,1500
+B012,Pebbles,Budgerigar,3,Female,Blue,Yes,No,Yes,700
+B013,Zazu,Toucan,5,Male,Black and Yellow,Yes,No,Yes,4500

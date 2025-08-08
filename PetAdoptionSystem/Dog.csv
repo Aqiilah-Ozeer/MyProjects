@@ -1,0 +1,14 @@
+Animal_Id,Name,Breed,Age,Gender,Color,Vaccinated,Microchipped,Adoption_Fee(Rs)
+D001,Buddy,Labrador Retriever,3,Male,Yellow,Yes,Yes,8000
+D002,Bella,Poodle,2,Female,White,Yes,No,7000
+D003,Max,German Shepherd,5,Male,Black and Tan,Yes,Yes,9000
+D004,Daisy,Beagle,4,Female,Tri-color,Yes,No,7500
+D005,Rocky,Boxer,6,Male,Brindle,Yes,Yes,8500
+D006,Luna,Shih Tzu,1,Female,Brown and White,No,No,6000
+D007,Charlie,Golden Retriever,4,Male,Golden,Yes,Yes,8000
+D008,Molly,Dachshund,3,Female,Brown,Yes,No,7000
+D009,Buster,French Bulldog,2,Male,Fawn,Yes,Yes,10000
+D010,Sophie,Cocker Spaniel,5,Female,Black,Yes,No,7500
+D011,Cooper,Border Collie,4,Male,Black and White,Yes,Yes,8000
+D012,Sadie,Chihuahua,3,Female,Tan,No,No,6000
+D013,Oscar,Siberian Husky,6,Male,Grey and White,Yes,Yes,9500

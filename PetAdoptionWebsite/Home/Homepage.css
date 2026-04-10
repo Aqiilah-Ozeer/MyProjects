@@ -1,0 +1,359 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #40c5f2;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0492C2;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: salmon;
+}
+
+.profile-btn {
+    background-color: #0492C2;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-btn:hover {
+    background-color: lightsalmon;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.dropdown-menu a {
+    color: #0492C2;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+    color: salmon;
+    border-radius: 5px;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/banner2.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.browse-btn {
+    background-color: lightSalmon;
+    color: white;
+    padding: 10px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.browse-btn:hover {
+    background-color: salmon;
+}
+/*Categories card */
+.categories {
+    padding: 30px 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+
+  
+  .categories h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .category-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .category-cards .card{
+    width: 200px;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .category-cards .card img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  /* How to adopt section */
+.how-to-adopt {
+    background-color: #E0F7FF;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.how-to-adopt h2 {
+    font-size: 35px;
+    color: #409be0;
+    margin-bottom: 30px;
+}
+
+/* Container for steps + image */
+.adopt-container {
+    display: flex;
+    gap: 40px;
+    align-items: center; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Steps column */
+.adopt-steps {
+    flex: 1;
+    max-width: 700px;
+}
+
+/* Single card for all steps */
+.step-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.step-card h3 {
+    color: turquoise;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Image column */
+.adopt-image {
+    flex: 1;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.adopt-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+/* Info Section */
+.info {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #f5f5f5;
+}
+
+.info h2 {
+    color: #409be0;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #c0e6f0;
+    border-radius: 10px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #409be0;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.footer-section p, 
+.footer-section ul, 
+.footer-section a {
+    color: white;
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 6px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.social-section a {
+    color: white;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.social-section a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+  
+
+

@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    background: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position:relative;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+h2, p {
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type=text], input[type=password] {
+    width:100%;
+    padding:12px 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    background: salmon;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+input[type=submit]:hover {
+    background: lightsalmon;
+    transform: translateY(-2px);
+}
+
+.signup {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.signup a {
+    color: darkturquoise;
+    font-weight: bold;
+    text-decoration: underline;
+
+}

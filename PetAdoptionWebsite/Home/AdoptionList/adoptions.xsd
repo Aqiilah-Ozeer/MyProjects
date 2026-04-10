@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Define the root element -->
+    <xs:element name="adoptions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="adoption" type="adoptionType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define adoption type -->
+    <xs:complexType name="adoptionType">
+        <xs:sequence>
+            <xs:element name="adoptionID" type="xs:positiveInteger"/>
+            <xs:element name="petName" type="xs:string"/>
+            <xs:element name="animal" type="xs:string"/>
+            <xs:element name="breed" type="xs:string"/>
+            <xs:element name="requestDate" type="xs:date"/>
+            <xs:element name="status" type="statusType"/>
+            <xs:element name="appointmentDate" type="xs:date" minOccurs="0"/>
+            <xs:element name="reasonForChoosing" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Define status enumeration -->
+    <xs:simpleType name="statusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Pending"/>
+            <xs:enumeration value="Approved"/>
+            <xs:enumeration value="Rejected"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

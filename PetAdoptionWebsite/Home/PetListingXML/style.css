@@ -1,0 +1,419 @@
+/* style.css (FULL UPDATED VERSION) */
+:root {
+  --deep-blue: #194569;
+  --steel-blue: #5F84A2;
+  --sky-blue: #91AEC4;
+  --powder-blue: #B7D0E1;
+  --pale-blue: #CADEED;
+  --ice-blue: #DBECF4;
+  --accent-green: #2A7C7E;
+  --adopted-red: #922B21;}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--pale-blue);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* --- Header & Footer --- */
+header {
+  background-color: var(--deep-blue);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+footer {
+    background-color: var(--deep-blue);
+    color: var(--pale-blue);
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* --- Live Search Bar (AJAX with XML) --- */
+.search-section {
+    margin-bottom: 20px;
+}
+
+.search-bar-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#pet-search-input {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1.05em;
+    border: 2px solid var(--sky-blue);
+    border-radius: 30px;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+#pet-search-input:focus {
+    border-color: var(--deep-blue);
+    box-shadow: 0 4px 12px rgba(25, 69, 105, 0.2);
+}
+
+.search-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid var(--powder-blue);
+    border-radius: 10px;
+    margin-top: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    z-index: 100;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid var(--ice-blue);
+    transition: background-color 0.2s;
+}
+
+.search-item:last-child {
+    border-bottom: none;
+}
+
+.search-item:hover {
+    background-color: var(--ice-blue);
+}
+
+.search-item.no-match {
+    justify-content: center;
+    color: var(--steel-blue);
+    font-style: italic;
+    cursor: default;
+}
+
+.search-item img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 2px solid var(--powder-blue);
+}
+
+.search-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-item-info strong {
+    color: var(--deep-blue);
+    font-size: 1em;
+}
+
+.search-item-info span {
+    color: var(--steel-blue);
+    font-size: 0.85em;
+}
+
+/* --- Filter Controls --- */
+.filter-controls {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.filter-controls h2 {
+    color: var(--deep-blue);
+    font-size: 1.2em;
+    margin-top: 0;
+    border-bottom: 1px solid var(--ice-blue);
+    padding-bottom: 5px;
+}
+
+.main-category-buttons, .sub-category-buttons {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.sub-category-buttons {
+    margin-top: 20px;
+    border-top: 1px dashed var(--sky-blue);
+    padding-top: 15px;
+}
+
+.sub-category-buttons h2 {
+    width: 100%; /* Ensure the heading takes full width */
+}
+
+nav button {
+  background-color: var(--steel-blue);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+nav button:hover {
+  background-color: var(--deep-blue);
+  transform: translateY(-1px);
+}
+
+nav button.active {
+    background-color: var(--deep-blue);
+    box-shadow: 0 0 0 3px var(--sky-blue);
+}
+
+.initial-sub-text {
+    color: var(--steel-blue);
+    font-style: italic;
+    margin: 5px 0;
+}
+
+
+/* --- Pet Grid Container (REQUIRED GRID LAYOUT) --- */
+.grid-container {
+  display: grid;
+  /* Creates a responsive grid of cards with a minimum width of 150px (small standard size) */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.grid-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.grid-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Ensure card images are uniform size like the example */
+.card-image-wrapper {
+    width: 100%;
+    height: 150px; /* Standardize height for small, uniform look */
+    overflow: hidden;
+    position: relative; /* Needed for status overlay */
+    background-color: var(--pale-blue); /* Background for images that don't fill */
+}
+
+.grid-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ESSENTIAL: Ensures images fill the space without distortion */
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Status Overlay Styling (Available/Adopted) */
+.pet-status {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.status-available {
+    background-color: var(--accent-green);
+}
+
+.status-adopted {
+    background-color: var(--adopted-red); 
+}
+
+.card-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+  color: var(--deep-blue);
+}
+
+.card-details .species-breed {
+    color: var(--steel-blue);
+    font-size: 0.8em;
+    margin: 2px 0;
+}
+
+.no-results {
+    grid-column: 1 / -1; 
+    text-align: center;
+    padding: 50px;
+    color: var(--deep-blue);
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+
+/* --- Pet Info Page Styles --- */
+.pet-info-page {
+    padding: 50px 15px;
+}
+
+.pet-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pet-info-image {
+    position: relative;
+    max-width: 45%;
+    min-width: 300px;
+    flex-grow: 1;
+}
+
+.pet-info-container img {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.pet-details {
+  flex: 1;
+  min-width: 350px;
+}
+
+.pet-details h2 {
+    color: var(--deep-blue);
+    border-bottom: 2px solid var(--sky-blue);
+    padding-bottom: 15px;
+    margin-top: 0;
+}
+
+.detail-group p {
+    font-size: 1.1em;
+    margin: 15px 0;
+    border-left: 4px solid var(--sky-blue);
+    padding-left: 10px;
+}
+
+.detail-fee {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: var(--ice-blue);
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--deep-blue);
+}
+
+.fee-amount {
+    color: var(--accent-green);
+    font-size: 1.4em;
+    margin-left: 10px;
+}
+
+.back-button, .adopt-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.back-button {
+    background-color: var(--steel-blue);
+    color: white;
+    margin-right: 15px;
+}
+
+.adopt-button {
+    background-color: var(--accent-green);
+    color: white;
+}
+
+.back-button:hover, .adopt-button:hover {
+    opacity: 0.9;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    
+    .pet-info-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .pet-info-image, .pet-details {
+        min-width: unset;
+        width: 100%;
+    }
+    
+    .main-category-buttons, .sub-category-buttons {
+        justify-content: center;
+    }
+}

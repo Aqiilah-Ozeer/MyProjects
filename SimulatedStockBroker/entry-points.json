@@ -1,0 +1,46 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "ConfirmAndReport.xaml",
+      "uniqueId": "f7e954b4-6b1a-4f7f-916b-8f8326a413e8",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_RecipientEmail": {
+            "type": "string",
+            "x-default-expression": "\"teeshagopall@gmail.com\"",
+            "default": "teeshagopall@gmail.com"
+          },
+          "in_TransactionStatus": {
+            "type": "string",
+            "x-default-expression": "\"NotFound\"",
+            "default": "NotFound"
+          },
+          "in_CurrentPrice": {
+            "type": "string",
+            "x-default-expression": "\"N/A\"",
+            "default": "N/A"
+          },
+          "in_ActionTaken": {
+            "type": "string",
+            "x-default-expression": "\"N/A\"",
+            "default": "N/A"
+          },
+          "in_CompanyName": {
+            "type": "string",
+            "x-default-expression": "\"Fake Corp.\"",
+            "default": "Fake Corp."
+          },
+          "in_RuleFilePath": {
+            "type": "string",
+            "x-default-expression": "\"D:\\Stock Broker Dev 5\\Rule.xlsx\"",
+            "default": "D:\\Stock Broker Dev 5\\Rule.xlsx"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}
